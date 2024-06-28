@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    fetchDiscounts('https://kaufland.md/specials', 'kaufland-discounts');
+    fetchDiscounts('https://www.kaufland.md/ro/oferte/oferte-saptamanale/saptamana-curenta.category=11_Cosmetice__%C3%AEngrijire.html', 'kaufland-discounts');
     fetchDiscounts('https://nr1.md/specials', 'nr1-discounts');
     fetchDiscounts('https://metro.md/specials', 'metro-discounts');
     fetchDiscounts('https://linella.md/specials', 'linella-discounts');
