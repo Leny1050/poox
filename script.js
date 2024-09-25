@@ -2,15 +2,11 @@ window.addEventListener('load', function() {
     const image = document.getElementById('popup-image');
     const sound = document.getElementById('popup-sound');
 
-    // Изображение плавно появляется через 0.5 секунд
+    // Резкое появление изображения
     setTimeout(() => {
         image.style.opacity = 1;
-    }, 500);
-
-    // Воспроизведение звука после появления изображения
-    image.addEventListener('transitionend', function() {
         sound.play().catch((error) => {
             console.log('Ошибка при воспроизведении звука:', error);
         });
-    });
+    }, 100); // Задержка перед появлением (100 мс)
 });
