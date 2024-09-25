@@ -28,6 +28,6 @@ window.addEventListener('load', function() {
             sound.play().catch((error) => {
                 console.log('Ошибка при воспроизведении звука:', error);
             });
-        }, 50);
+        }, 10);
     }
 });
