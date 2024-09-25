@@ -1,3 +1,4 @@
+/* Общие стили */
 body, html {
     margin: 0;
     padding: 0;
@@ -7,14 +8,17 @@ body, html {
     overflow: hidden; /* Убираем прокрутку */
 }
 
+/* Контейнер для изображения */
 #popup-container {
     position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
+    display: none; /* Скрываем изображение до нажатия кнопки */
 }
 
+/* Изображение */
 img {
     position: absolute;
     top: 0;
@@ -26,6 +30,7 @@ img {
     animation: flash 1s infinite; /* Анимация мигания */
 }
 
+/* Анимация мигания */
 @keyframes flash {
     0%, 50%, 100% {
         opacity: 1; /* Полностью видимое изображение */
@@ -33,4 +38,29 @@ img {
     25%, 75% {
         opacity: 0; /* Полностью прозрачное изображение */
     }
+}
+
+/* Контейнер для кнопки */
+#button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Стили для кнопки */
+#start-button {
+    padding: 20px 40px;
+    font-size: 24px;
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Эффект при наведении на кнопку */
+#start-button:hover {
+    background-color: #ff5555;
 }
