@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мигающее изображение с эффектом и звуком</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000;
+            overflow: hidden; /* Убираем прокрутку */
+        }
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw; /* Устанавливаем изображение на всю ширину окна */
+            height: 100vh; /* Устанавливаем изображение на всю высоту окна */
+            object-fit: cover; /* Обрезаем изображение, чтобы оно заполнило весь экран */
+            opacity: 0;
+            transition: transform 0.5s ease;
+            transform: scale(0.1); /* Уменьшаем изображение в начале */
+            animation: blink 1s infinite; /* Добавляем анимацию мигания */
+        }
+
+        @keyframes blink {
+            0%, 50%, 100% {
+                opacity: 0; /* Полностью прозрачное изображение */
+            }
+            25%, 75% {
+                opacity: 1; /* Полностью видимое изображение */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <img id="popup-image" src="data:image/jpeg;base64,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" alt="Мигающее изображение">
+    <audio id="popup-sound" src="https://zvukipro.com/uploads/files/2019-09/1567417041_gdfgdgf.mp3" preload="auto"></audio>
+
+    <script>
+        window.addEventListener('load', function() {
+            const image = document.getElementById('popup-image');
+            const sound = document.getElementById('popup-sound');
+
+            // Воспроизводим звук
+            sound.play();
+
+            // Плавное появление и начало мигания изображения
+            setTimeout(() => {
+                image.style.transform = 'scale(1)';
+            }, 100); // Небольшая задержка для эффекта выскакивания
+        });
+    </script>
+
+</body>
+</html>
+
