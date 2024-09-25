@@ -1,32 +1,31 @@
 body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #000;
-    overflow: hidden; /* Убираем прокрутку */
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    overflow: hidden; /* Убираем прокрутку */
 }
 
 #popup-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: #000;
-    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
 }
 
 img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw; /* Изображение заполняет весь экран */
-    height: 100vh;
-    object-fit: cover; /* Заполняет экран без искажения */
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out; /* Плавное появление */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Изображение заполняет весь экран */
+    height: 100vh;
+    object-fit: cover; /* Обрезаем изображение, чтобы оно заполнило весь экран */
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out; /* Плавное появление */
 }
