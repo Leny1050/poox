@@ -1,46 +1,16 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Скидки в магазинах Молдовы</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мигающее изображение с эффектом и звуком</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Подключение CSS -->
 </head>
 <body>
-    <header>
-        <h1>Скидки в магазинах Молдовы</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#kaufland">Kaufland</a></li>
-            <li><a href="#nr1">Nr.1</a></li>
-            <li><a href="#metro">Metro</a></li>
-            <li><a href="#linella">Linella</a></li>
-        </ul>
-    </nav>
-    <main>
-        <section id="kaufland">
-            <h2>Kaufland</h2>
-            <div id="kaufland-discounts">Загрузка...</div>
-        </section>
-        <section id="nr1">
-            <h2>Nr.1</h2>
-            <div id="nr1-discounts">Загрузка...</div>
-        </section>
-        <section id="metro">
-            <h2>Metro</h2>
-            <div id="metro-discounts">Загрузка...</div>
-        </section>
-        <section id="linella">
-            <h2>Linella</h2>
-            <div id="linella-discounts">Загрузка...</div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Скидки в магазинах Молдовы</p>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/cheerio/1.0.0-rc.10/cheerio.min.js"></script>
-    <script src="script.js"></script>
+
+    <img id="popup-image" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD..." alt="Мигающее изображение">
+    <audio id="popup-sound" src="https://zvukipro.com/uploads/files/2019-09/1567417041_gdfgdgf.mp3" preload="auto"></audio>
+
+    <script src="script.js"></script> <!-- Подключение JavaScript -->
 </body>
 </html>
