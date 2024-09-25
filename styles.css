@@ -42,6 +42,9 @@ img {
     opacity: 0;
     animation: blinkText 2s infinite;
     z-index: 10; /* Текст поверх изображения */
+    text-align: center;
+    width: 80%;
+    word-wrap: break-word;
 }
 
 @keyframes blinkText {
@@ -59,4 +62,4 @@ img {
     50% { transform: translate(5px, -5px); }
     75% { transform: translate(-5px, -5px); }
     100% { transform: translate(5px, 5px); }
-          }
+}
