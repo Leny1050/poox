@@ -4,10 +4,11 @@ window.addEventListener('load', function() {
     const text = document.getElementById('popup-text');
     let volume = 0;
 
-    // Чтобы звук воспроизводился на мобильных устройствах, нужно использовать пользовательское событие
+    // Обработчик для начала воспроизведения звука
     const startInteraction = () => {
+        // Воспроизводим звук
         sound.play().catch((error) => {
-            console.log('Звук не воспроизведён из-за запретов мобильного браузера.');
+            console.log('Звук не воспроизведён:', error);
         });
 
         // Постепенное увеличение громкости звука
@@ -23,13 +24,12 @@ window.addEventListener('load', function() {
         // Плавное появление текста
         setTimeout(() => {
             text.style.opacity = 1;
-        }, 2000);
+        }, 1000); // Текст появится через 1 секунду
 
-        // Плавное появление и начало мигания изображения
+        // Плавное появление изображения
         setTimeout(() => {
-            image.style.transform = 'scale(1)';
-            image.style.animation = 'shake 0.2s infinite'; // Эффект дрожания
-        }, 100);
+            image.style.opacity = 1;
+        }, 500); // Изображение появится через 0.5 секунды
 
         // Убираем обработчик после первого взаимодействия
         window.removeEventListener('touchstart', startInteraction);
