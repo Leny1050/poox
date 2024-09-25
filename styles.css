@@ -1,67 +1,33 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    overflow: hidden; /* Убираем прокрутку */
 }
 
-header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 1em 0;
-    text-align: center;
+img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Устанавливаем изображение на всю ширину окна */
+    height: 100vh; /* Устанавливаем изображение на всю высоту окна */
+    object-fit: cover; /* Обрезаем изображение, чтобы оно заполнило весь экран */
+    opacity: 0;
+    transition: transform 0.5s ease;
+    transform: scale(0.1); /* Уменьшаем изображение в начале */
+    animation: blink 1s infinite; /* Добавляем анимацию мигания */
 }
 
-nav {
-    background-color: #333;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-nav ul li {
-    float: left;
-}
-
-nav ul li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-nav ul li a:hover {
-    background-color: #111;
-}
-
-main {
-    padding: 20px;
-}
-
-main section {
-    background-color: white;
-    margin: 20px 0;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
-.discount {
-    border-bottom: 1px solid #ccc;
-    padding: 10px 0;
+@keyframes blink {
+    0%, 50%, 100% {
+        opacity: 0; /* Полностью прозрачное изображение */
+    }
+    25%, 75% {
+        opacity: 1; /* Полностью видимое изображение */
+    }
 }
