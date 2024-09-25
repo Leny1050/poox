@@ -27,7 +27,7 @@ img {
     height: 100vh;
     object-fit: cover; /* Заполняет экран без искажения */
     opacity: 0; /* Изначально скрыто */
-    animation: flash 1s infinite; /* Анимация мигания */
+    animation: flash 0.3s infinite; /* Анимация мигания */
 }
 
 /* Анимация мигания */
